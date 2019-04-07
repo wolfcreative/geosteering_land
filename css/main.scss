@@ -18,6 +18,9 @@ b,strong{font-family:'OpenSans Bold';font-weight:400}
 sup{font-size:11px}
 p{
     font-size:16px;line-height:32px;
+    @media (max-width:959px){
+        br{display:none}
+    }
     @media (max-width:439px){font-size:14px;line-height:22px}
 }
 
@@ -87,8 +90,9 @@ header nav>.uk-grid,header .uk-active .uk-grid{height:auto}
     }
       
     .chiefdate{
-        font:38px/34px "PartnerUltraCondensed",sans-serif;text-transform:uppercase;
+        font-size:38px;line-height:34px;
         @media (max-width:439px){font-size:28px;line-height:26px}
+
 
         .date{
             font-size:30px;color:$softred;
@@ -97,11 +101,43 @@ header nav>.uk-grid,header .uk-active .uk-grid{height:auto}
         .city{color:$softblue}
         .year{color:$greyblue}
     }
+}
+      
+.chiefdate{
+    font:28px/26px "PartnerUltraCondensed",sans-serif;text-transform:uppercase;
+    @media (max-width:439px){font-size:24px;line-height:22px}
 
-    p{
-        @media (max-width:439px){
-            br{display:none}
+    .date{
+        font-size:23px;color:#fff;
+        @media (max-width:439px){font-size:20px}
+    }
+    .city{color:#4db0df}
+    .year{color:$greyblue}
+    .address{color:$greyblue}
+}
+
+footer{
+    background:#0c4455 url(../img/footer.jpg) no-repeat left center;
+
+    .first{
+        padding-top:70px;padding-bottom:70px;
+
+        .title,.subtitle{font-family:"PartnerUltraCondensed",sans-serif;color:#fff;text-transform:uppercase}
+        .title{font-size:90px;letter-spacing:4px}
+        .subtitle{font-size:30px;line-height:38px;letter-spacing:1px}
+        .stroke{font:24px "Open Sans Condensed",sans-serif;text-transform:uppercase;color:#fff;background:#c9473a;padding:5px 10px;margin-top:10px;letter-spacing:2px;text-align:center}
+
+        @media(min-width:960px){
+            .chiefdate{margin-left:40px}
         }
+    }
+    .second{
+        border-top:1px solid rgba(255,255,255,0.15);font-size:14px;color:#fff;padding:21px 0;
+
+        a{display:inline-block;font:14px/20px 'OpenSans Regular',sans-serif;margin:5px 0;padding-left:25px;color:#fff}
+        a.phone{background:url(../img/awesome/phone-w.png) no-repeat left center}
+        a.mail{background:url(../img/awesome/mail-w.png) no-repeat left 3px}
+
     }
 }
 
@@ -162,5 +198,7 @@ h3{
     @media(max-width:959px){padding:35px}
     @media(max-width:439px){padding:25px 18px}
 }
+.uk-text-semibold{font:600 18px/32px 'Open Sans',sans-serif}
 .uk-width-custom{width:585px}
 .uk-bg-softblue{background:#0d4b5e}
+.uk-bg-darkblue{background:#0c4455}
