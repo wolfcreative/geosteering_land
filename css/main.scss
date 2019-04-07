@@ -16,6 +16,10 @@ a{font-family:'OpenSans Regular',sans-serif;-webkit-transition:.2s ease-in-out;t
 a:hover,a:focus{-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out}
 b,strong{font-family:'OpenSans Bold';font-weight:400}
 sup{font-size:11px}
+p{
+    font-size:16px;line-height:32px;
+    @media (max-width:439px){font-size:14px;line-height:22px}
+}
 
 header{border-top:4px solid #fafafa}
 header .uk-container{max-width:1140px}
@@ -95,21 +99,36 @@ header nav>.uk-grid,header .uk-active .uk-grid{height:auto}
     }
 
     p{
-        font-size:16px;line-height:32px;
         @media (max-width:439px){
-            font-size:14px;line-height:22px;
-
             br{display:none}
         }
     }
 }
 
-h1,h2,h3,h4,h5{font-family:"PartnerUltraCondensed";line-height:normal;text-transform:uppercase;color:#161616}
-h1{
+/* Headers */
+h1,h2,h3,h4,h5,.uk-h1,.uk-h2,.uk-h3{font-family:"PartnerUltraCondensed";line-height:normal;text-transform:uppercase;color:#161616}
+h1,.uk-h1{
     font-size:90px;letter-spacing:5px;
     @media(max-width:1279px){font-size:80px;letter-spacing:4px}
     @media(max-width:959px){font-size:70px;letter-spacing:3px}
     @media(max-width:439px){font-size:48px}
+}
+h2{
+    font-size:48px;letter-spacing:0.1px;
+    @media(max-width:1279px){font-size:43px}
+    @media(max-width:959px){font-size:38px;letter-spacing:0}
+    @media(max-width:439px){font-size:36px}
+}
+h3{
+    font-size:30px;letter-spacing:0.1px;
+    @media(max-width:1279px){font-size:28px}
+
+    span.uk-text-danger{
+        font-size:72px;color:$softred!important;margin-left:-5px;
+        @media(max-width:1279px){font-size:68px}
+        @media(max-width:959px){font-size:58px}
+        @media(max-width:439px){font-size:48px}
+    }
 }
 
 /* Buttons */
@@ -131,8 +150,17 @@ h1{
 
 /* UiKit Replacer */
 .uk-divider-small:after{width:82px;border-top:4px solid $softred}
+.uk-light p{color:#fff}
+.uk-input{
+    border-color:#cfcfcf;padding-left:20px!important;
+    &::placeholder{font: 24px/52px "PartnerUltraCondensed",sans-serif;color: #111;text-transform: uppercase;letter-spacing: 1.5px;}
+}
 
 /* Custom */
-.uk-padding-medium{padding:55px}
+.uk-padding-medium{
+    padding:55px;
+    @media(max-width:959px){padding:35px}
+    @media(max-width:439px){padding:25px 18px}
+}
 .uk-width-custom{width:585px}
 .uk-bg-softblue{background:#0d4b5e}
