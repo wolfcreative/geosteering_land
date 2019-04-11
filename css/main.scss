@@ -214,6 +214,21 @@ header nav>.uk-grid,header .uk-active .uk-grid{height:auto}
     }
 }
 
+.gallery{
+    padding:80px 0 95px;
+    @media(max-width:959px){padding:45px 0 65px}
+    @media(max-width:639px){padding:25px 0 30px}
+
+    img{width:100%}
+
+    .uk-grid .uk-grid{
+        @media(min-width:640px){
+            margin-top:15px;margin-bottom:15px;
+            img{padding:2px}
+        }
+    }
+}
+
 footer{
     background:#0c4455 url(../img/footer.jpg) no-repeat left center / cover;
     @media(max-width:639px){background-position-x:34%}
@@ -309,6 +324,7 @@ h3{
 /* UiKit Replacer */
 .uk-divider-small:after{width:82px;border-top:4px solid $softred!important}
 .uk-light p{color:#fff}
+.uk-lightbox{background:rgba(0,0,0,.8)}
 .uk-input{
     border-color:#cfcfcf;padding-left:20px!important;
     &::placeholder{font:24px/52px "PartnerUltraCondensed",sans-serif;color:#111;text-transform:uppercase;letter-spacing:1.5px}
@@ -324,7 +340,9 @@ h3{
 .uk-width-custom{width:585px}
 .uk-bg-softblue{background:#0d4b5e}
 .uk-bg-darkblue{background:#0c4455}
+.uk-bg-grey{background:$grey}
 .uk-link-underline{
     border-bottom:1px solid #fff;line-height:18px;display:inline-block;
     &:hover,&:focus{border:none;text-decoration:none;opacity:0.7}
 }
+.uk-link-red{color:$softred;&:hover,&:focus{color:darken($softred,10%)}}

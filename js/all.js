@@ -14,5 +14,11 @@ $(function() {
         $(this).closest('.uk-card-body').removeClass('active');
         $(this).remove();
     });
+
+    $( ".reviews .uk-card-body.active" ).click(function(e) {
+        e.preventDefault();
+        $(this).removeClass('active');
+        $(this).find('.uk-button-smallblue').remove();
+    });
     /* END */
 });
