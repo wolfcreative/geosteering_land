@@ -264,7 +264,7 @@ header nav>.uk-grid,header .uk-active .uk-grid{height:auto}
 }
 
 .questions{
-    background:transparent;margin-top:-115px;position:relative;z-index:5;
+    background:transparent;margin-top:-125px;position:relative;z-index:5;
     @media(max-width:1800px){margin-top:-80px}
     @media(max-width:1700px){margin-top:-30px}
     @media(max-width:1279px){margin-top:-25px}
@@ -454,7 +454,7 @@ h3{
 .uk-button{
     border:2px solid;font:24px/54px "PartnerUltraCondensed",sans-serif;padding:0 32px;letter-spacing:1.5px;
     @media (min-width:960px){min-width:314px}
-    @media (max-width:959px){font-size:22px;padding:0 20px}
+    @media (max-width:959px){font-size:22px;padding:0 15px}
     @media (max-width:439px){form{width:100%}}
 
     &.uk-button-ghostblue{
@@ -479,6 +479,12 @@ h3{
 .uk-input{
     border-color:#cfcfcf;padding-left:20px!important;
     &::placeholder{font:24px/52px "PartnerUltraCondensed",sans-serif;color:#111;text-transform:uppercase;letter-spacing:1.5px}
+    /* Safari 11+ Fix */
+    @media not all and (min-resolution:.001dpcm) {
+        @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+            &::placeholder{line-height:normal}
+        }
+    }
 }
 
 /* Custom */
